@@ -14,41 +14,36 @@ export default function App() {
     setTouched(prevTouched => prevTouched + 1);
   }
   return (
-    <View style={styles.container}>
-      <TouchableOpacity
+    <View style={{ flex: 1 }}>
+      <View style={{ flex: 1, backgroundColor: "powderblue" }} />
+      <View
         style={{
-          backgroundColor: "#333",
-          paddingTop: 8,
-          paddingBottom: 8,
-          paddingLeft: 16,
-          paddingRight: 16,
-          borderRadius: 16,
-          marginBottom: 16
+          flex: 2,
+          backgroundColor: "skyblue",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center"
         }}
-        onPress={handlePress}
       >
-        <Text style={{ color: "white" }}>Touch</Text>
-      </TouchableOpacity>
-      <Text>has been touched: {touched} times</Text>
+        <TouchableOpacity
+          style={{
+            backgroundColor: "#444",
+            paddingTop: 8,
+            paddingBottom: 8,
+            paddingLeft: 16,
+            paddingRight: 16,
+            borderRadius: 16,
+            marginBottom: 16
+          }}
+          onPress={handlePress}
+        >
+          <Text style={{ color: "white" }}>Touch</Text>
+        </TouchableOpacity>
+        <Text style={{ color: "white" }}>
+          has been touched: {touched} times
+        </Text>
+      </View>
+      <View style={{ flex: 3, backgroundColor: "steelblue" }} />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#F5FCFF"
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: "center",
-    margin: 10
-  },
-  instructions: {
-    textAlign: "center",
-    color: "#333333",
-    marginBottom: 5
-  }
-});
