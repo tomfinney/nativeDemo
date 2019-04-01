@@ -15,8 +15,19 @@ export default function App() {
   }
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={handlePress}>
-        <Text>Touch</Text>
+      <TouchableOpacity
+        style={{
+          backgroundColor: "#333",
+          paddingTop: 8,
+          paddingBottom: 8,
+          paddingLeft: 16,
+          paddingRight: 16,
+          borderRadius: 16,
+          marginBottom: 16
+        }}
+        onPress={handlePress}
+      >
+        <Text style={{ color: "white" }}>Touch</Text>
       </TouchableOpacity>
       <Text>has been touched: {touched} times</Text>
     </View>
