@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { Text, View, TouchableOpacity } from "react-native";
 
 export default function App() {
-  const [touched, setTouched] = useState(0);
+  const [pressed, setPressed] = useState(0);
 
   function handlePress() {
-    setTouched(prevTouched => prevTouched + 1);
+    setPressed(prevPressed => prevPressed + 1);
   }
   return (
     <View style={{ flex: 1 }}>
@@ -31,11 +31,11 @@ export default function App() {
           }}
           onPress={handlePress}
         >
-          <Text style={{ color: "white" }}>Touch</Text>
+          <Text style={{ color: "white" }}>Press</Text>
         </TouchableOpacity>
         <Text style={{ color: "white" }}>
-          Button has been touched:{" "}
-          <Text style={{ fontWeight: "bold" }}>{touched}</Text> times
+          Button has been pressed:{" "}
+          <Text style={{ fontWeight: "bold" }}>{pressed}</Text> times
         </Text>
       </View>
       <View style={{ flex: 3, backgroundColor: "steelblue" }} />
