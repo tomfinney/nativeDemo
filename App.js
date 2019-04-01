@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity
-} from "react-native";
+import { Text, View, TouchableOpacity } from "react-native";
 
 export default function App() {
   const [touched, setTouched] = useState(0);
@@ -40,7 +34,8 @@ export default function App() {
           <Text style={{ color: "white" }}>Touch</Text>
         </TouchableOpacity>
         <Text style={{ color: "white" }}>
-          has been touched: {touched} times
+          Button has been touched:{" "}
+          <Text style={{ fontWeight: "bold" }}>{touched}</Text> times
         </Text>
       </View>
       <View style={{ flex: 3, backgroundColor: "steelblue" }} />
